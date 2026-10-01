@@ -53,7 +53,7 @@ export default function Dashboard() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/tasks/${userData.id}`
+        `https://smarttaskmanager-i0oh.onrender.com/api/tasks/${userData.id}`
       );
 
       const data = await response.json();
@@ -85,7 +85,7 @@ export default function Dashboard() {
     const userData = JSON.parse(savedUser);
 
     try {
-      const response = await fetch("http://localhost:5000/api/tasks", {
+      const response = await fetch("https://smarttaskmanager-i0oh.onrender.com/api/tasks", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -118,7 +118,7 @@ export default function Dashboard() {
   const toggleTask = async (id: number) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/tasks/${id}`,
+        `https://smarttaskmanager-i0oh.onrender.com/api/tasks/${id}`,
         {
           method: "PUT",
         }
@@ -144,7 +144,7 @@ export default function Dashboard() {
   const deleteTask = async (id: number) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/tasks/${id}`,
+        `https://smarttaskmanager-i0oh.onrender.com/api/tasks/${id}`,
         {
           method: "DELETE",
         }

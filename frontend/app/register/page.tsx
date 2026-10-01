@@ -11,7 +11,7 @@ export default function Register() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/api/users", {
+      const response = await fetch("https://smarttaskmanager-i0oh.onrender.com/api/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
